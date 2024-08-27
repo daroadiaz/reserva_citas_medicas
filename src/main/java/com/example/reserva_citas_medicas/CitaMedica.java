@@ -19,28 +19,28 @@ public class CitaMedica {
         return idCita;
     }
 
-    public void setIdCita(String idCita) {
-        this.idCita = idCita;
-    }
-
     public String getPaciente() {
         return paciente;
-    }
-
-    public void setPaciente(String paciente) {
-        this.paciente = paciente;
     }
 
     public Date getFecha() {
         return fecha;
     }
 
-    public void setFecha(Date fecha) {
-        this.fecha = fecha;
-    }
-
     public String getDoctor() {
         return doctor;
+    }
+
+    public void setIdCita(String idCita) {
+        this.idCita = idCita;
+    }
+
+    public void setPaciente(String paciente) {
+        this.paciente = paciente;
+    }
+
+    public void setFecha(Date fecha) {
+        this.fecha = fecha;
     }
 
     public void setDoctor(String doctor) {

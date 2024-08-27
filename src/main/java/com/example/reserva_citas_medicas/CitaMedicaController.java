@@ -14,13 +14,12 @@ public class CitaMedicaController {
     private List<Horario> horariosDisponibles = new ArrayList<>();
 
     public CitaMedicaController() {
-        // Datos dummy para citas médicas con idCita específicos
-        citas.add(new CitaMedica("1", "Juan Pérez", new Date(), "Dr. Pérez"));
-        citas.add(new CitaMedica("2", "María López", new Date(), "Dra. Gómez"));
-
-        // Datos dummy para horarios disponibles
-        horariosDisponibles.add(new Horario(new Date(), "Dr. Pérez"));
-        horariosDisponibles.add(new Horario(new Date(), "Dra. Gómez"));
+        citas.add(new CitaMedica("1", "Juan Pérez",
+                new Date(), "Doctora Juanita"));
+        citas.add(new CitaMedica("2", "María López",
+                new Date(), "Doctor Fernando"));
+        horariosDisponibles.add(new Horario(new Date(), "Doctora Juanita"));
+        horariosDisponibles.add(new Horario(new Date(), "Doctor Fernando"));
     }
 
     @GetMapping
@@ -38,9 +37,4 @@ public class CitaMedicaController {
         return horariosDisponibles;
     }
 
-    @PostMapping
-    public CitaMedica crearCita(@RequestBody CitaMedica cita) {
-        citas.add(cita);
-        return cita;
-    }
 }

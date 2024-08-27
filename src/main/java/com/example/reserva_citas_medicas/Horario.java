@@ -15,12 +15,12 @@ public class Horario {
         return fecha;
     }
 
-    public void setFecha(Date fecha) {
-        this.fecha = fecha;
-    }
-
     public String getDoctor() {
         return doctor;
+    }
+
+    public void setFecha(Date fecha) {
+        this.fecha = fecha;
     }
 
     public void setDoctor(String doctor) {
