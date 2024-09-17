@@ -19,7 +19,7 @@ public class Paciente {
     private String telefono;
     private String email;
 
-    // Constructor, getters y setters
+
     public Paciente() {}
 
     public Paciente(String nombre, String apellido, Date fechaNacimiento, String telefono, String email) {
@@ -30,7 +30,7 @@ public class Paciente {
         this.email = email;
     }
 
-    // Getters y setters
+    
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
     public String getNombre() { return nombre; }

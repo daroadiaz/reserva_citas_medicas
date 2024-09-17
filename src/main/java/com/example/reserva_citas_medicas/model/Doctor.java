@@ -15,7 +15,7 @@ public class Doctor {
     private String telefono;
     private String email;
 
-    // Constructor, getters y setters
+  
     public Doctor() {}
 
     public Doctor(String nombre, String apellido, String especialidad, String telefono, String email) {
@@ -26,7 +26,7 @@ public class Doctor {
         this.email = email;
     }
 
-    // Getters y setters
+  
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
     public String getNombre() { return nombre; }

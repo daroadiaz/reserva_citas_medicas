@@ -12,7 +12,7 @@ public class Especialidad {
     private String nombre;
     private String descripcion;
 
-    // Constructor, getters y setters
+
     public Especialidad() {}
 
     public Especialidad(String nombre, String descripcion) {
@@ -20,7 +20,7 @@ public class Especialidad {
         this.descripcion = descripcion;
     }
 
-    // Getters y setters
+
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
     public String getNombre() { return nombre; }

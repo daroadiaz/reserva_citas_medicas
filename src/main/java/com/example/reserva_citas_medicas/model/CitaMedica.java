@@ -24,7 +24,7 @@ public class CitaMedica {
     private String motivo;
     private String estado;
 
-    // Constructor, getters y setters
+
     public CitaMedica() {}
 
     public CitaMedica(Paciente paciente, Doctor doctor, LocalDate fecha, LocalTime hora, String motivo, String estado) {
@@ -36,7 +36,7 @@ public class CitaMedica {
         this.estado = estado;
     }
 
-    // Getters y setters
+
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
     public Paciente getPaciente() { return paciente; }

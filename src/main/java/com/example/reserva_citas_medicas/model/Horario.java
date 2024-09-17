@@ -18,7 +18,6 @@ public class Horario {
     private LocalTime horaInicio;
     private LocalTime horaFin;
 
-    // Constructor, getters y setters
     public Horario() {}
 
     public Horario(Doctor doctor, String diaSemana, LocalTime horaInicio, LocalTime horaFin) {
@@ -28,7 +27,6 @@ public class Horario {
         this.horaFin = horaFin;
     }
 
-    // Getters y setters
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
     public Doctor getDoctor() { return doctor; }
