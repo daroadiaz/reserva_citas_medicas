@@ -7,6 +7,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import org.springframework.hateoas.EntityModel;
+import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder;
+import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.*;
 
 @RestController
 @RequestMapping("/api/citas")
@@ -21,8 +24,11 @@ public class CitaMedicaController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<CitaMedica> getCitaById(@PathVariable Long id) {
+    public ResponseEntity<EntityModel<CitaMedica>> getCitaById(@PathVariable Long id) {
         return citaMedicaService.getCitaById(id)
+                .map(citaMedica -> EntityModel.of(citaMedica,
+                        linkTo(methodOn(CitaMedicaController.class).getCitaById(id)).withSelfRel(),
+                        linkTo(methodOn(CitaMedicaController.class).getAllCitas()).withRel("citas")))
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
     }
